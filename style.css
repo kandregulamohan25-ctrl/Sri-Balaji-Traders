@@ -1,0 +1,334 @@
+:root {
+    --primary-color: #4a148c; /* Deep Purple */
+    --primary-light: #7c43bd; /* Lighter Purple */
+    --secondary-color: #0d47a1; /* Deep Blue */
+    --accent-color: #ffc107; /* Amber/Yellow for calls to action */
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --light-bg: #f5f5f7;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.btn-primary:hover {
+    background-color: #ffca28;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Sections Common */
+section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Hardware Section */
+.hardware-section {
+    background-color: var(--white);
+}
+
+.gst-info {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--primary-light);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.product-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Septic Section */
+.septic-section {
+    background-color: #e3f2fd; /* Light Blue BG */
+}
+
+.septic-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.septic-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.septic-features {
+    margin: 20px 0;
+}
+
+.septic-features li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.emergency-contact {
+    margin-top: 30px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    box-shadow: var(--shadow);
+}
+
+.phone-link {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.truck-icon {
+    font-size: 10rem;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--white);
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+.contact-item h3 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.contact-item a {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .septic-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
