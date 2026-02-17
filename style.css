@@ -1,15 +1,19 @@
 :root {
-    --primary-color: #4a148c; /* Deep Purple */
-    --primary-light: #7c43bd; /* Lighter Purple */
-    --secondary-color: #0d47a1; /* Deep Blue */
-    --accent-color: #ffc107; /* Amber/Yellow for calls to action */
+    --primary-color: #4a148c;
+    /* Deep Purple */
+    --primary-light: #7c43bd;
+    /* Lighter Purple */
+    --secondary-color: #0d47a1;
+    /* Deep Blue */
+    --accent-color: #ffc107;
+    /* Amber/Yellow for calls to action */
     --text-color: #333333;
     --bg-color: #ffffff;
     --light-bg: #f5f5f7;
     --white: #ffffff;
     --border-radius: 8px;
     --transition: all 0.3s ease;
-    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -45,7 +49,7 @@ ul {
 /* Header */
 .header {
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -205,7 +209,8 @@ section {
 
 /* Septic Section */
 .septic-section {
-    background-color: #e3f2fd; /* Light Blue BG */
+    background-color: #e3f2fd;
+    /* Light Blue BG */
 }
 
 .septic-info h3 {
@@ -260,8 +265,12 @@ section {
 
 .contact-section h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--white);
+}
+
+.contact-section .container {
+    padding: 0 15px;
 }
 
 .contact-grid {
@@ -304,7 +313,19 @@ section {
         right: 0;
         background: var(--white);
         padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        font-size: 1.1rem;
     }
 
     .nav-links.active {
@@ -318,11 +339,22 @@ section {
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .septic-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
-    
+
+    .septic-image-placeholder {
+        order: -1;
+        /* Image first on mobile */
+        margin-bottom: 20px;
+    }
+
+    .truck-icon {
+        font-size: 6rem;
+    }
+
     .hero-buttons {
         flex-direction: column;
     }
