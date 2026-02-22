@@ -95,35 +95,103 @@ ul {
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
-    padding: 100px 0;
-    text-align: center;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: left;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
     opacity: 0.9;
 }
 
-.hero-shop-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 4px solid var(--white);
+}
+
+.hero-features span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+.hero-features .icon {
+    font-size: 1rem;
 }
 
 .hero-buttons {
     display: flex;
+    gap: 15px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.hero-shop-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--white);
+    transform: rotate(-10deg);
+}
+
+.experience-badge .number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .btn {
@@ -173,6 +241,97 @@ section {
 
 .subtitle {
     font-size: 1.1rem;
+    color: #666;
+}
+
+/* Brands Section */
+.brands-section {
+    background-color: var(--light-bg);
+    padding: 40px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.brands-marquee {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.brand-item {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    transition: var(--transition);
+    padding: 10px 20px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.brand-item:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+    background-color: var(--white);
+    padding: 80px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-light);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: var(--light-bg);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.feature-card p {
     color: #666;
 }
 
@@ -297,7 +456,36 @@ section {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+
+    .experience-badge {
+        bottom: -10px;
+        left: auto;
+        right: -10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .experience-badge .number {
+        font-size: 1.2rem;
+    }
+
+    .experience-badge .text {
+        font-size: 0.7rem;
     }
 
 
