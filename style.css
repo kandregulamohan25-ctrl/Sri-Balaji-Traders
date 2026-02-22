@@ -107,8 +107,17 @@ ul {
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     opacity: 0.9;
+}
+
+.hero-shop-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 4px solid var(--white);
 }
 
 .hero-buttons {
@@ -207,55 +216,6 @@ section {
     margin-bottom: 15px;
 }
 
-/* Septic Section */
-.septic-section {
-    background-color: #e3f2fd;
-    /* Light Blue BG */
-}
-
-.septic-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-}
-
-.septic-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.septic-features {
-    margin: 20px 0;
-}
-
-.septic-features li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.emergency-contact {
-    margin-top: 30px;
-    background: var(--white);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    display: inline-block;
-    box-shadow: var(--shadow);
-}
-
-.phone-link {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-top: 5px;
-}
-
-.truck-icon {
-    font-size: 10rem;
-    text-align: center;
-}
 
 /* Contact Section */
 .contact-section {
@@ -340,20 +300,7 @@ section {
         font-size: 2rem;
     }
 
-    .septic-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
 
-    .septic-image-placeholder {
-        order: -1;
-        /* Image first on mobile */
-        margin-bottom: 20px;
-    }
-
-    .truck-icon {
-        font-size: 6rem;
-    }
 
     .hero-buttons {
         flex-direction: column;
